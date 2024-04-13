@@ -10,7 +10,7 @@ export default function MaxWidthContainer({ children, className }: Props) {
   return (
     <div
       className={cn(
-        "flex max-w-[640px] flex-col items-center justify-center px-4",
+        "mx-auto flex max-w-[640px] flex-col items-center justify-center px-4",
         className,
       )}
     >

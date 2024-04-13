@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="bg-peach relative -z-30 h-[843px] w-full overflow-clip">
+    <section className="relative -z-30 h-[843px] w-full overflow-clip bg-peach">
       <MaxWidthContainer className="gap-4 pt-20 text-center text-white">
         <h1>Award-winning custom designs and digital branding solutions</h1>
         <p>
@@ -19,7 +19,7 @@ export default function HeroSection() {
         width={0}
         height={0}
         className="absolute bottom-[-22%] -z-10 h-auto w-full scale-[1.75]"
-        sizes="75vw"
+        sizes="100vw"
         alt="smartphone"
       />
       <Image

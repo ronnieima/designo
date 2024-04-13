@@ -7,10 +7,10 @@
     @apply text-[32px] font-medium leading-[36px] md:text-5xl md:tracking-[2px];
   }
   h2 {
-    @apply text-[40px] font-medium leading-[48px] tracking-[2px];
+    @apply text-[28px] font-medium leading-[36px] tracking-[1.4px] md:text-[40px] md:leading-[48px] md:tracking-[2px];
   }
   h3 {
-    @apply text-[20px] font-medium leading-[26px] tracking-[5px];
+    @apply text-[15px] font-medium tracking-[5px] md:text-[20px] md:leading-[26px];
   }
   p {
     @apply text-[16px] leading-[26px];

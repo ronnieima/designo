@@ -8,8 +8,8 @@ export default function Navbar() {
         src={"/assets/shared/desktop/logo-dark.png"}
         width={0}
         height={0}
-        className="h-auto w-auto"
-        sizes="75vw"
+        className="h-auto w-52"
+        sizes="100vw"
         alt="Designo Logo"
       />
       <Image
