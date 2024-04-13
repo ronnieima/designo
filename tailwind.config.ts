@@ -25,6 +25,9 @@ const config = {
       white: "#FFFFFF",
       lightGray: "#F1F3F5",
     },
+    backgroundImage: {
+      circle: "url('/assets/shared/desktop/bg-pattern-small-circle.svg')",
+    },
     extend: {
       keyframes: {
         "accordion-down": {

@@ -10,7 +10,7 @@
     @apply text-[28px] font-medium leading-[36px] tracking-[1.4px] md:text-[40px] md:leading-[48px] md:tracking-[2px];
   }
   h3 {
-    @apply text-[15px] font-medium tracking-[5px] md:text-[20px] md:leading-[26px];
+    @apply text-[15px] font-medium leading-[26px] tracking-[5px] md:text-[20px];
   }
   p {
     @apply text-[16px] leading-[26px];
