@@ -1,6 +1,6 @@
 import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
-import Project from "./Project";
+import Project from "./ui/Project";
 import { projects } from "@/lib/content";
 
 export default function ProjectSection() {

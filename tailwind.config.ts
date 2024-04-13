@@ -27,6 +27,8 @@ const config = {
     },
     backgroundImage: {
       circle: "url('/assets/shared/desktop/bg-pattern-small-circle.svg')",
+      threeCircles:
+        "url('/assets/shared/desktop/bg-pattern-three-circles.svg')",
     },
     extend: {
       keyframes: {

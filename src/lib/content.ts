@@ -40,3 +40,37 @@ export const qualities = [
     className: "rotate-90",
   },
 ];
+
+export const links = [
+  { label: "Our Company", href: "/our-company" },
+  { label: "Locations", href: "/locations" },
+  { label: "contact", href: "/contact" },
+];
+
+export const socials = [
+  {
+    label: "facebook",
+    href: "https://www.facebook.com",
+    imageUrl: "/assets/shared/desktop/icon-facebook.svg",
+  },
+  {
+    label: "youtube",
+    href: "https://www.youtube.com",
+    imageUrl: "/assets/shared/desktop/icon-youtube.svg",
+  },
+  {
+    label: "twitter",
+    href: "https://www.twitter.com",
+    imageUrl: "/assets/shared/desktop/icon-twitter.svg",
+  },
+  {
+    label: "pinterest",
+    href: "https://www.pinterest.com",
+    imageUrl: "/assets/shared/desktop/icon-pinterest.svg",
+  },
+  {
+    label: "instagram",
+    href: "https://www.instagram.com",
+    imageUrl: "/assets/shared/desktop/icon-instagram.svg",
+  },
+];

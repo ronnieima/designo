@@ -4,7 +4,7 @@ import QualitiesSection from "@/components/QualitiesSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pb-[311px]">
       <HeroSection />
       <ProjectSection />
       <QualitiesSection />

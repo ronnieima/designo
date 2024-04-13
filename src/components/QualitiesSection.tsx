@@ -1,11 +1,11 @@
 import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
 import { qualities } from "@/lib/content";
-import Quality from "./Quality";
+import Quality from "./ui/Quality";
 
 export default function QualitiesSection() {
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <MaxWidthContainer className="gap-20 text-darkGray">
         {qualities.map((quality) => (
           <Quality
