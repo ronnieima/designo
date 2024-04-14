@@ -19,7 +19,7 @@ export default function Quality({
     <figure
       className={cn(
         " flex flex-col items-center justify-center gap-12 text-center",
-        "md:flex-row",
+        "sm:flex-row",
       )}
     >
       <div className="relative size-[202px] h-full w-full">
@@ -39,7 +39,7 @@ export default function Quality({
         ></div>
       </div>
 
-      <header className="space-y-8 md:text-left">
+      <header className="space-y-8 sm:text-left">
         <h3 className="text-[20px]">{header}</h3>
         <figcaption>{description}</figcaption>
       </header>

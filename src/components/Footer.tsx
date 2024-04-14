@@ -10,9 +10,9 @@ export default function Footer() {
   return (
     <footer className="relative bg-black pb-16 pt-[253px] text-center">
       <MaxWidthContainer
-        className={cn("gap-8", "md:grid md:grid-cols-3 md:grid-rows-3")}
+        className={cn("gap-8", "sm:grid sm:grid-cols-3 sm:grid-rows-3")}
       >
-        <div className="bg-threeCircles absolute  -top-1/4 flex h-[379px] max-w-[690px] flex-col items-center justify-between gap-8 rounded-lg bg-peach px-6 py-16 text-white md:p-16">
+        <div className="bg-threeCircles absolute  -top-1/4 flex h-[379px] max-w-[690px] flex-col items-center justify-between gap-8 rounded-lg bg-peach px-6 py-16 text-white sm:p-16">
           <header className="flex flex-col gap-4 ">
             <h1>Let’s talk about your project</h1>
             <p>
@@ -31,8 +31,8 @@ export default function Footer() {
           sizes="66vw"
           alt="light logo"
         />
-        <div className="h-1 w-full bg-darkGray/20 md:col-span-full md:row-span-2"></div>
-        <NavLinks className="md:col-span-2 md:row-[1_/_1] md:flex-row" />
+        <div className="h-1 w-full bg-darkGray/20 sm:col-span-full sm:row-span-2"></div>
+        <NavLinks className="sm:col-span-2 sm:row-[1_/_1] sm:flex-row" />
         <div className="space-y-10">
           <div className="text-lightGray/50">
             <p className="font-bold">Designo Central Office </p>

@@ -6,7 +6,7 @@ import React from "react";
 export default function Project({ label, href, backgroundUrl }: ProjectType) {
   return (
     <div
-      className="h-[250px] w-full rounded-xl bg-cover text-white "
+      className="h-[250px] sm:h-[200px] w-full rounded-xl bg-cover text-white "
       style={{ backgroundImage: `url('${backgroundUrl}')` }}
     >
       <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl bg-black/70">

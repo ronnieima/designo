@@ -4,13 +4,13 @@
 
 @layer base {
   h1 {
-    @apply text-[32px] font-medium leading-[36px] md:text-5xl md:tracking-[2px];
+    @apply text-[32px] font-medium leading-[36px] sm:text-5xl sm:tracking-[2px];
   }
   h2 {
-    @apply text-[28px] font-medium leading-[36px] tracking-[1.4px] md:text-[40px] md:leading-[48px] md:tracking-[2px];
+    @apply text-[28px] font-medium leading-[36px] tracking-[1.4px] sm:text-[40px] sm:leading-[48px] sm:tracking-[2px];
   }
   h3 {
-    @apply text-[15px] font-medium leading-[26px] tracking-[5px] md:text-[20px];
+    @apply text-[15px] font-medium leading-[26px] tracking-[5px] sm:text-[20px];
   }
   p {
     @apply text-[16px] leading-[26px];
