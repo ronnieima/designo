@@ -1,10 +1,16 @@
 import { links } from "@/lib/content";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
-export default function NavLinks() {
+export default function NavLinks({ className }: { className?: string }) {
   return (
-    <ul className="flex flex-col items-center justify-center gap-8 text-white">
+    <ul
+      className={cn(
+        "flex flex-col items-center justify-center gap-8 text-white",
+        className,
+      )}
+    >
       {links.map((link) => (
         <Link
           key={link.label}

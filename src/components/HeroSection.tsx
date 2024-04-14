@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative -z-30 h-[843px] w-full overflow-clip bg-peach">
-      <MaxWidthContainer className="gap-4 pt-20 text-center text-white">
+    <section className="relative -z-30 mx-auto h-[843px] max-w-[689px] overflow-clip bg-peach md:rounded-lg">
+      <MaxWidthContainer className="max-w-[573px] gap-4 pt-20 text-center text-white">
         <h1>Award-winning custom designs and digital branding solutions</h1>
-        <p>
+        <p className="max-w-[445px]">
           With over 10 years in the industry, we are experienced in creating
           fully responsive websites, app design, and engaging brand experiences.
           Find out more about our services.

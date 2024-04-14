@@ -18,25 +18,28 @@ export default function Quality({
   return (
     <figure
       className={cn(
-        "relative flex flex-col items-center justify-center gap-12 text-center",
+        " flex flex-col items-center justify-center gap-12 text-center",
+        "md:flex-row",
       )}
     >
-      <Image
-        src={imageUrl}
-        width={0}
-        height={0}
-        className={cn("size-[202px] bg-cover ")}
-        sizes="100vw"
-        alt={header}
-      />
-      <div
-        className={cn(
-          "bg-circle absolute top-0 -z-10 size-[202px] bg-cover",
-          className,
-        )}
-      ></div>
+      <div className="relative size-[202px] h-full w-full">
+        <Image
+          src={imageUrl}
+          width={0}
+          height={0}
+          className={cn("h-full w-full bg-cover")}
+          sizes="100vw"
+          alt={header}
+        />
+        <div
+          className={cn(
+            "bg-circle absolute top-0 -z-10 h-full w-full bg-cover",
+            className,
+          )}
+        ></div>
+      </div>
 
-      <header className="space-y-8">
+      <header className="space-y-8 md:text-left">
         <h3 className="text-[20px]">{header}</h3>
         <figcaption>{description}</figcaption>
       </header>
