@@ -1,12 +1,13 @@
 import { ProjectType } from "@/lib/content";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Project({ label, href, backgroundUrl }: ProjectType) {
+export default function Project({ label, href, backgroundUrl, className }: ProjectType) {
   return (
     <div
-      className="h-[250px] sm:h-[200px] w-full rounded-xl bg-cover text-white "
+      className={cn("h-[250px] sm:min-h-[200px] xl:min-h-[308px] sm:h-full w-full rounded-xl bg-cover text-white ",className)}
       style={{ backgroundImage: `url('${backgroundUrl}')` }}
     >
       <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl bg-black/70">

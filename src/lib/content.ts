@@ -3,6 +3,7 @@ export const projects = [
     label: "Web Design",
     href: "/web-design",
     backgroundUrl: "/assets/home/desktop/image-web-design-small.jpg",
+    className: "row-span-full"
   },
   {
     label: "App Design",
