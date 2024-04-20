@@ -4,10 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function Project({ label, href, backgroundUrl, className }: ProjectType) {
+type Props = {
+  project: ProjectType;
+};
+
+export default function Project({
+  project: { backgroundUrl, href, className, label },
+}: Props) {
   return (
     <div
-      className={cn("h-[250px] sm:min-h-[200px] xl:min-h-[308px] sm:h-full w-full rounded-xl bg-cover text-white ",className)}
+      className={cn(
+        "h-[250px] w-full rounded-xl bg-cover text-white sm:h-[200px]  xl:h-[308px] ",
+        className,
+      )}
       style={{ backgroundImage: `url('${backgroundUrl}')` }}
     >
       <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl bg-black/70">

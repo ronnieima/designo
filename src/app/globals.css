@@ -13,6 +13,6 @@
     @apply text-[15px] font-medium leading-[26px] tracking-[5px] sm:text-[20px];
   }
   p {
-    @apply text-[16px] leading-[26px];
+    @apply text-[15px] leading-[25px] md:text-[16px] md:leading-[26px];
   }
 }

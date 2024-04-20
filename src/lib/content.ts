@@ -1,17 +1,24 @@
 export const projects = [
   {
     label: "Web Design",
+    description:
+      "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
     href: "/web-design",
     backgroundUrl: "/assets/home/desktop/image-web-design-small.jpg",
-    className: "row-span-full"
+    className: "row-span-full",
+    introBgUrl: "/assets/web-design/desktop/bg-pattern-intro-web.svg",
   },
   {
     label: "App Design",
+    description:
+      "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
     href: "/app-design",
     backgroundUrl: "/assets/home/desktop/image-app-design.jpg",
   },
   {
     label: "Graphic Design",
+    description:
+      "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
     href: "/graphic-design",
     backgroundUrl: "/assets/home/desktop/image-graphic-design.jpg",
   },

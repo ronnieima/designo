@@ -6,7 +6,7 @@ export default function CallToAction() {
   return (
     <div
       className={cn(
-        "absolute -top-1/4 left-1/2 h-[379px] w-full  max-w-[327px] -translate-x-1/2  rounded-lg bg-peach bg-threeCircles  text-white",
+        "absolute -top-1/4 left-1/2 h-[379px] w-full  max-w-[327px] -translate-x-1/2  rounded-lg bg-peach text-white",
         "md:max-w-[690px]",
         "lg:max-w-[1111px] ",
       )}
