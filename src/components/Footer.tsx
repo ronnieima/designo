@@ -1,10 +1,9 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
-import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
+import CallToAction from "./ui/CallToAction";
 import NavLinks from "./ui/NavLinks";
 import SocialLinks from "./ui/SocialLinks";
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -12,17 +11,7 @@ export default function Footer() {
       <MaxWidthContainer
         className={cn("gap-8", "sm:grid sm:grid-cols-3 sm:grid-rows-[1fr_0.1fr_4fr] sm:pt-20")}
       >
-        <div className="bg-threeCircles absolute  -top-1/4 flex h-[379px] max-w-[690px] flex-col items-center justify-between gap-8 rounded-lg bg-peach px-6 py-16 text-white sm:p-16">
-          <header className="flex flex-col gap-4 ">
-            <h1>Let’s talk about your project</h1>
-            <p>
-              Ready to take it to the next level? Contact us today and find out
-              how our expertise can help your business grow.
-            </p>
-          </header>
-          <Button className="h-[56px] w-[152px] uppercase">Get in touch</Button>
-          <div className="bg-threeCircles absolute top-0 h-full w-full  bg-contain"></div>
-        </div>
+        <CallToAction/>
         <Image
           src={"/assets/shared/desktop/logo-light.png"}
           width={0}
