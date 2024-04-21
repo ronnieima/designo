@@ -2,6 +2,7 @@ import { ProjectType } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 type Props = {
@@ -11,11 +12,12 @@ type Props = {
 export default function ProjectTypeLink({
   projectType: { backgroundUrl, href, className, label },
 }: Props) {
+  const pathname = usePathname();
   return (
     <div
       className={cn(
         "h-[250px] w-full rounded-xl bg-cover text-white sm:h-[200px]  xl:h-[308px] ",
-        className,
+        { "row-span-2 min-h-full": label === "Web Design" },
       )}
       style={{ backgroundImage: `url('${backgroundUrl}')` }}
     >

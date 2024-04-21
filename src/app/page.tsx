@@ -1,10 +1,10 @@
 import HeroSection from "@/components/HeroSection";
-import ProjectTypesSection from "@/components/ProjectSection";
+import ProjectTypesSection from "@/components/ProjectTypesSection";
 import QualitiesSection from "@/components/QualitiesSection";
 
 export default function Home() {
   return (
-    <main className="pb-[311px]">
+    <main>
       <HeroSection />
       <ProjectTypesSection />
       <QualitiesSection />

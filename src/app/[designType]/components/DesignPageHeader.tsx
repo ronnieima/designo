@@ -17,7 +17,7 @@ export default function DesignPageHeader({
       )}
     >
       <h1>{projectType.label}</h1>
-      <p>{projectType.description}</p>
+      <p className="max-w-sm">{projectType.description}</p>
       <Image
         src={projectType.introBgUrl!}
         className={"absolute -right-16 h-auto w-full scale-150 "}
