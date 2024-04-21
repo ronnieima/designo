@@ -4,7 +4,7 @@ import MaxWidthContainer from "./MaxWidthContainer";
 import Project from "./ui/Project";
 import { usePathname } from "next/navigation";
 
-export default function ProjectSection() {
+export default function ProjectTypesSection() {
   const searchParmas = usePathname();
   const projectLinks = searchParmas
     ? projects.filter((project) => project.href !== searchParmas)

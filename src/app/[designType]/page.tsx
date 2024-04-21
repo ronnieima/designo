@@ -1,4 +1,4 @@
-import ProjectSection from "@/components/ProjectSection";
+import ProjectTypesSection from "@/components/ProjectSection";
 import React from "react";
 import DesignPageHeader from "./components/DesignPageHeader";
 import { projects } from "@/lib/content";
@@ -17,7 +17,7 @@ export default function DesignTypePage({ params }: Props) {
   return (
     <section>
       <DesignPageHeader project={project} />
-      <ProjectSection />
+      <ProjectTypesSection />
     </section>
   );
 }
