@@ -20,6 +20,7 @@ const config = {
     colors: {
       peach: "#E7816B",
       lightPeach: "#FFAD9B",
+      lighterPeach: "#FDF3F0",
       black: "#1D1C1E",
       darkGray: "#333136",
       white: "#FFFFFF",

@@ -1,23 +1,25 @@
-import ProjectTypesSection from "@/components/ProjectSection";
 import React from "react";
 import DesignPageHeader from "./components/DesignPageHeader";
-import { projects } from "@/lib/content";
+import { projectTypes } from "@/lib/content";
 import { notFound } from "next/navigation";
+import ProjectTypesSection from "@/components/ProjectTypesSection";
+import ProjectsSection from "./components/ProjectsSection";
 
 type Props = {
   params: { designType: string };
 };
 
 export default function DesignTypePage({ params }: Props) {
-  const project = projects.find(
-    (project) => project.href.slice(1) === params.designType,
+  const projectType = projectTypes.find(
+    (projectType) => projectType.href.slice(1) === params.designType,
   );
-  if (!project) notFound();
+  if (!projectType) notFound();
 
   return (
-    <section>
-      <DesignPageHeader project={project} />
+    <main>
+      <DesignPageHeader projectType={projectType} />
+      <ProjectsSection projectType={projectType} />
       <ProjectTypesSection />
-    </section>
+    </main>
   );
 }

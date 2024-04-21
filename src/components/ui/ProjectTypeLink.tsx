@@ -5,11 +5,11 @@ import Link from "next/link";
 import React from "react";
 
 type Props = {
-  project: ProjectType;
+  projectType: ProjectType;
 };
 
-export default function Project({
-  project: { backgroundUrl, href, className, label },
+export default function ProjectTypeLink({
+  projectType: { backgroundUrl, href, className, label },
 }: Props) {
   return (
     <div

@@ -5,9 +5,9 @@ import Image from "next/image";
 import React from "react";
 
 export default function DesignPageHeader({
-  project,
+  projectType,
 }: {
-  project: ProjectType;
+  projectType: ProjectType;
 }) {
   return (
     <MaxWidthContainer
@@ -16,14 +16,14 @@ export default function DesignPageHeader({
         "md:rounded-lg",
       )}
     >
-      <h1>{project.label}</h1>
-      <p>{project.description}</p>
+      <h1>{projectType.label}</h1>
+      <p>{projectType.description}</p>
       <Image
-        src={project.introBgUrl!}
+        src={projectType.introBgUrl!}
         className={"absolute -right-16 h-auto w-full scale-150 "}
         width={0}
         height={0}
-        alt={`${project.label} intro background`}
+        alt={`${projectType.label} intro background`}
       />
     </MaxWidthContainer>
   );
