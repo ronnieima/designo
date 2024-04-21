@@ -2,28 +2,31 @@ import { ProjectType } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
 
 type Props = {
   projectType: ProjectType;
 };
 
 export default function ProjectTypeLink({
-  projectType: { backgroundUrl, href, className, label },
+  projectType: { backgroundUrl, href, label },
 }: Props) {
-  const pathname = usePathname();
   return (
-    <div
+    <Link
+      href={href}
       className={cn(
-        "h-[250px] w-full rounded-xl bg-cover text-white sm:h-[200px]  xl:h-[308px] ",
+        "group h-[250px] w-full rounded-xl bg-cover text-white  sm:h-[200px]  xl:h-[308px] ",
         { "row-span-2 min-h-full": label === "Web Design" },
       )}
       style={{ backgroundImage: `url('${backgroundUrl}')` }}
     >
-      <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl bg-black/70">
+      <div
+        className={cn(
+          "flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl bg-black/70",
+          "transition-colors group-hover:bg-peach/70",
+        )}
+      >
         <h2 className="uppercase">{label}</h2>
-        <Link href={href} className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-4">
           <h3>VIEW PROJECTS</h3>
           <Image
             src={"/assets/shared/desktop/icon-right-arrow.svg"}
@@ -32,8 +35,8 @@ export default function ProjectTypeLink({
             className="size-3"
             alt={label}
           />
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

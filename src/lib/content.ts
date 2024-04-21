@@ -5,7 +5,6 @@ export const projectTypes = [
       "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
     href: "/web-design",
     backgroundUrl: "/assets/home/desktop/image-web-design-small.jpg",
-    className: "row-span-full",
     introBgUrl: "/assets/web-design/desktop/bg-pattern-intro-web.svg",
     projects: [
       {
