@@ -140,7 +140,7 @@ export const qualities = [
 ];
 
 export const links = [
-  { label: "Our Company", href: "/our-company" },
+  { label: "Our Company", href: "/about" },
   { label: "Locations", href: "/locations" },
   { label: "contact", href: "/contact" },
 ];

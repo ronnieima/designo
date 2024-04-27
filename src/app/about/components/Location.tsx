@@ -3,6 +3,7 @@ import React from "react";
 import { LocationType } from "./LocationsSection";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Location({ location }: { location: LocationType }) {
   return (
@@ -25,7 +26,9 @@ export default function Location({ location }: { location: LocationType }) {
       </div>
       <div className="flex flex-col items-center gap-8">
         <h3 className="uppercase">{location.label}</h3>
-        <Button variant={"dark"}>SEE LOCATION</Button>
+        <Button variant={"dark"}>
+          <Link href={`/locations#${location.value}`}>SEE LOCATION</Link>
+        </Button>
       </div>
     </div>
   );

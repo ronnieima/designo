@@ -28,10 +28,14 @@ const config = {
     },
     backgroundImage: {
       circle: "url('/assets/shared/desktop/bg-pattern-small-circle.svg')",
+      twoCircles: "url('/assets/shared/desktop/bg-pattern-two-circles.svg')",
       threeCircles:
         "url('/assets/shared/desktop/bg-pattern-three-circles.svg')",
     },
     extend: {
+      borderRadius: {
+        border: "15px",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
