@@ -1,6 +1,5 @@
-import Image, { getImageProps } from "next/image";
-import React from "react";
 import HeroAbout from "./components/HeroAbout";
+import LocationsSection from "./components/LocationsSection";
 import WorldClassTalent from "./components/WorldClassTalent";
 
 export default function AboutPage() {
@@ -8,6 +7,7 @@ export default function AboutPage() {
     <main className="h-full pb-[500px]">
       <HeroAbout />
       <WorldClassTalent />
+      <LocationsSection />
     </main>
   );
 }
