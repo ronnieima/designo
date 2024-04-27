@@ -6,6 +6,7 @@ import MaxWidthContainer from "./MaxWidthContainer";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { createPortal } from "react-dom";
+import { links } from "@/lib/content";
 
 export default function Navbar() {
   const [isOpenMobileNav, setIsOpenMobileNav] = useState(false);
@@ -32,10 +33,14 @@ export default function Navbar() {
             onClick={() => setIsOpenMobileNav(!isOpenMobileNav)}
           >
             <Image
-              src={"/assets/shared/mobile/icon-hamburger.svg"}
+              src={
+                isOpenMobileNav
+                  ? "/assets/shared/mobile/icon-close.svg"
+                  : "/assets/shared/mobile/icon-hamburger.svg"
+              }
               width={0}
               height={0}
-              className="size-6 "
+              className="size-6"
               sizes="25vw"
               alt="Hamburger Menu"
             />
@@ -44,10 +49,14 @@ export default function Navbar() {
       </nav>
       {isOpenMobileNav &&
         createPortal(
-          <div className="absolute top-[96px] h-full w-full bg-black/50">
-            <div className="  h-[235px]  bg-black text-white">
-              <ul></ul>
-            </div>
+          <div className="absolute top-[96px] h-[calc(100%-96px)] w-full bg-black/50 md:hidden">
+            <ul className="flex h-[235px] flex-col items-start justify-center gap-8 bg-black px-6 py-12 text-[24px] uppercase leading-[25px] text-white">
+              {links.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>,
           document.body,
         )}
