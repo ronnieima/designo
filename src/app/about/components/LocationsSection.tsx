@@ -26,7 +26,7 @@ export type LocationType = (typeof locations)[0];
 
 export default function LocationsSection() {
   return (
-    <section className="flex flex-col items-center gap-12 py-32 md:py-0">
+    <section className="flex flex-col items-center gap-12 py-32 md:py-0 xl:flex-row xl:gap-48">
       {locations.map((location) => (
         <Location key={location.label} location={location} />
       ))}
