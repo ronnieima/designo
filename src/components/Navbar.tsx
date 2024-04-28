@@ -10,10 +10,9 @@ import { links } from "@/lib/content";
 
 export default function Navbar() {
   const [isOpenMobileNav, setIsOpenMobileNav] = useState(false);
-  console.log(isOpenMobileNav);
   return (
     <>
-      <nav className=" flex h-[96px] items-center">
+      <nav className=" flex h-[96px] items-center md:h-[128px]">
         <MaxWidthContainer className="w-full flex-row justify-between px-4 sm:px-0">
           <Link href={"/"}>
             <Image

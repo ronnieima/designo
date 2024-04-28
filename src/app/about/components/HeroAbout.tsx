@@ -1,12 +1,9 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image, { getImageProps } from "next/image";
-import AboutSectionContainer from "./AboutSectionContainer";
+import SectionTemplate from "../../../components/SectionTemplate";
 
-type Props = {
-  reverseRow: boolean;
-};
-
-export default function HeroAbout({ reverseRow = false }: Props) {
+export default function HeroAbout() {
   const common = {
     alt: "About Page Hero",
     sizes: "(max-width: 768px) 100vw, 33vw",
@@ -39,8 +36,8 @@ export default function HeroAbout({ reverseRow = false }: Props) {
     src: "/assets/about/mobile/image-about-hero.jpg",
   });
   return (
-    <AboutSectionContainer variant="peach" reverseRow>
-      <picture className="w-full xl:max-w-[476px]">
+    <SectionTemplate reverseRow variant="peach">
+      <SectionTemplate.Picture>
         <source media="(min-width: 1440px)" srcSet={desktopHero} />
         <source media="(min-width: 768px)" srcSet={tabletHero} />
         <source media="(min-width: 500px)" srcSet={mobileHero} />
@@ -52,13 +49,8 @@ export default function HeroAbout({ reverseRow = false }: Props) {
             "xl:rounded-r-radius xl:rounded-tl-none",
           )}
         />
-      </picture>
-      <div
-        className={cn(
-          "relative flex flex-col items-center justify-center gap-6 px-6 py-20 text-center ",
-          "overflow-clip xl:w-2/3 xl:items-start xl:py-[135px] xl:pl-24 xl:pr-[82px] xl:text-left",
-        )}
-      >
+      </SectionTemplate.Picture>
+      <SectionTemplate.Content>
         <Image
           src={"/assets/shared/desktop/bg-pattern-small-circle.svg"}
           width={0}
@@ -81,7 +73,7 @@ export default function HeroAbout({ reverseRow = false }: Props) {
             and digital experiences that connect with our clients’ audiences.
           </p>
         </div>
-      </div>
-    </AboutSectionContainer>
+      </SectionTemplate.Content>
+    </SectionTemplate>
   );
 }

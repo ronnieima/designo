@@ -1,6 +1,7 @@
-import MaxWidthContainer from "@/components/MaxWidthContainer";
+"use client";
+import { cn } from "@/lib/utils";
 import { getImageProps } from "next/image";
-import React from "react";
+import SectionTemplate from "../../../components/SectionTemplate";
 
 export default function RealDealSection() {
   const common = {
@@ -35,34 +36,38 @@ export default function RealDealSection() {
     src: "/assets/about/mobile/image-real-deal.jpg",
   });
   return (
-    <section className="flex flex-col">
-      <MaxWidthContainer className="px-0">
-        <picture className=" w-full">
-          <source media="(min-width: 1440px)" srcSet={desktop} />
-          <source media="(min-width: 768px)" srcSet={tablet} />
-          <source media="(min-width: 500px)" srcSet={mobile} />
-          <img
-            {...rest}
-            style={{ width: "100%", height: "100%" }}
-            className="md:rounded-t-border"
-          />
-        </picture>
-        <div className="md:rounded-b-border flex h-full flex-col items-center justify-center gap-6 bg-lighterPeach px-6 py-20 text-center text-black">
-          <h1 className="text-peach">The real deal</h1>
-          <p>
-            As strategic partners in our clients’ businesses, we are ready to
-            take on any challenge as our own. Solving real problems require
-            empathy and collaboration, and we strive to bring a fresh
-            perspective to every opportunity. We make design and technology more
-            accessible and give you tools to measure success.
-          </p>
-          <p>
-            We are visual storytellers in appealing and captivating ways. By
-            combining business and marketing strategies, we inspire audiences to
-            take action and drive real results.
-          </p>
-        </div>
-      </MaxWidthContainer>
-    </section>
+    <SectionTemplate reverseRow>
+      <SectionTemplate.Picture>
+        <source media="(min-width: 1440px)" srcSet={desktop} />
+        <source media="(min-width: 768px)" srcSet={tablet} />
+        <source media="(min-width: 500px)" srcSet={mobile} />
+        <img
+          {...rest}
+          style={{ width: "100%", height: "100%" }}
+          className={cn(
+            "md:rounded-t-radius",
+            "xl:rounded-r-radius xl:rounded-tl-none",
+          )}
+        />
+      </SectionTemplate.Picture>
+      <SectionTemplate.Content>
+        <SectionTemplate.BackgroundPattern />
+        <SectionTemplate.Header className="text-peach">
+          The real deal
+        </SectionTemplate.Header>
+        <p>
+          As strategic partners in our clients’ businesses, we are ready to take
+          on any challenge as our own. Solving real problems require empathy and
+          collaboration, and we strive to bring a fresh perspective to every
+          opportunity. We make design and technology more accessible and give
+          you tools to measure success.
+        </p>
+        <p>
+          We are visual storytellers in appealing and captivating ways. By
+          combining business and marketing strategies, we inspire audiences to
+          take action and drive real results.
+        </p>
+      </SectionTemplate.Content>
+    </SectionTemplate>
   );
 }

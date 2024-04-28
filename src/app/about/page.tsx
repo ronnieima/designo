@@ -6,7 +6,7 @@ import WorldClassTalent from "./components/WorldClassTalent";
 export default function AboutPage() {
   return (
     <main className="flex h-full flex-col items-center pb-[120px] md:gap-32 xl:gap-40">
-      <HeroAbout reverseRow />
+      <HeroAbout />
       <WorldClassTalent />
       <LocationsSection />
       <RealDealSection />
