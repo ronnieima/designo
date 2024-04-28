@@ -34,7 +34,7 @@ const config = {
     },
     extend: {
       borderRadius: {
-        border: "15px",
+        radius: "15px",
       },
       keyframes: {
         "accordion-down": {

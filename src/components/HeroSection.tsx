@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative -z-30 mx-auto h-[843px] max-w-[689px] xl:max-w-[1111px] xl:h-[640px] overflow-clip bg-peach sm:rounded-lg xl:px-24">
-      <MaxWidthContainer className="max-w-[573px] xl:max-w-[540px] gap-4 pt-20 text-center text-white justify-start xl:text-left xl:flex xl:flex-col xl:items-start xl:justify-between xl:mx-0 h-full xl:py-36">
+    <section className="relative -z-30 mx-auto h-[843px] max-w-[689px] overflow-clip bg-peach sm:rounded-lg xl:h-[640px] xl:max-w-[1111px] xl:px-24">
+      <MaxWidthContainer className="h-full max-w-[573px] justify-start gap-4 pt-20 text-center text-white xl:mx-0 xl:flex xl:max-w-[540px] xl:flex-col xl:items-start xl:justify-between xl:py-36 xl:text-left">
         <h1>Award-winning custom designs and digital branding solutions</h1>
         <p className="max-w-[445px]">
           With over 10 years in the industry, we are experienced in creating
@@ -18,7 +18,7 @@ export default function HeroSection() {
         src={"/assets/home/desktop/image-hero-phone.png"}
         width={0}
         height={0}
-        className="absolute  -z-10 h-auto w-full scale-[1.75] -bottom-96 sm:-bottom-96 sm:scale-100 xl:-right-1/4 xl:-bottom-[600px] xl:scale-[0.6]"
+        className="absolute  -bottom-96 -z-10 h-auto w-full scale-[1.75] sm:-bottom-96 sm:scale-100 xl:-bottom-[600px] xl:-right-1/4 xl:scale-[0.6]"
         sizes="100vw"
         alt="smartphone"
       />

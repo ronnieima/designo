@@ -1,12 +1,16 @@
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import { cn } from "@/lib/utils";
-import { getImageProps } from "next/image";
+import Image, { getImageProps } from "next/image";
 import React from "react";
 
-export default function HeroAbout() {
+type Props = {
+  reverseRow: boolean;
+};
+
+export default function HeroAbout({ reverseRow = false }: Props) {
   const common = {
     alt: "About Page Hero",
-    sizes: "100vw",
+    sizes: "(max-width: 768px) 100vw, 33vw",
   };
   const {
     props: { srcSet: desktopHero },
@@ -36,33 +40,51 @@ export default function HeroAbout() {
     src: "/assets/about/mobile/image-about-hero.jpg",
   });
   return (
-    <section className="h-full">
-      <MaxWidthContainer className="px-0">
-        <picture className=" w-full">
+    <section className={cn("h-full bg-peach", "md:rounded-radius")}>
+      <MaxWidthContainer
+        className={cn("px-0 ", "xl:flex-row-reverse xl:items-stretch")}
+      >
+        <picture className="w-full xl:w-[476px]">
           <source media="(min-width: 1440px)" srcSet={desktopHero} />
           <source media="(min-width: 768px)" srcSet={tabletHero} />
           <source media="(min-width: 500px)" srcSet={mobileHero} />
           <img
             {...rest}
             style={{ width: "100%", height: "100%" }}
-            className="md:rounded-t-border"
+            className={cn(
+              "md:rounded-t-radius",
+              "xl:rounded-r-radius xl:rounded-tl-none",
+            )}
           />
         </picture>
         <div
           className={cn(
-            "relative flex h-1/2  flex-col items-center justify-center gap-6  bg-peach px-6 py-20 text-center  text-white",
-            "md:rounded-b-border",
+            "relative flex flex-col items-center justify-center gap-6 px-6 py-20 text-center text-white",
+            "overflow-clip xl:w-2/3 xl:items-start xl:py-[135px] xl:pl-24 xl:pr-[82px] xl:text-left",
           )}
         >
-          {/* <div className="-translate-y-4/5 absolute right-1/2 h-full  w-full -rotate-90 scale-150 bg-circle bg-clip-padding"></div> */}
-          <h1>About Us</h1>
-          <p>
-            Founded in 2010, we are a creative agency that produces lasting
-            results for our clients. We’ve partnered with many startups,
-            corporations, and nonprofits alike to craft designs that make real
-            impact. We’re always looking forward to creating brands, products,
-            and digital experiences that connect with our clients’ audiences.
-          </p>
+          <Image
+            src={"/assets/shared/desktop/bg-pattern-small-circle.svg"}
+            width={0}
+            height={0}
+            className={cn(
+              "absolute z-0 rotate-180",
+              "-top-1/3 right-0 size-[292px] -rotate-90",
+              "md:-left-[130px] md:-top-[400px] md:size-[640px]",
+              "xl:bottom-0 xl:left-auto xl:right-0 xl:top-auto xl:size-[640px] xl:rotate-180",
+            )}
+            alt="small circle"
+          />
+          <div className="z-10 space-y-6 md:space-y-8">
+            <h1>About Us</h1>
+            <p>
+              Founded in 2010, we are a creative agency that produces lasting
+              results for our clients. We’ve partnered with many startups,
+              corporations, and nonprofits alike to craft designs that make real
+              impact. We’re always looking forward to creating brands, products,
+              and digital experiences that connect with our clients’ audiences.
+            </p>
+          </div>
         </div>
       </MaxWidthContainer>
     </section>
