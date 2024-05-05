@@ -43,7 +43,7 @@ export default function RealDealSection() {
         <source media="(min-width: 500px)" srcSet={mobile} />
         <img
           {...rest}
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
           className={cn(
             "md:rounded-t-radius",
             "xl:rounded-r-radius xl:rounded-tl-none",
