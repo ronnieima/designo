@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function ContactPage() {
   return (
     <main className="flex flex-col items-center ">
-      <section className="bg-peach px-6 py-20 text-white">
+      <section className="space-y-12 bg-peach px-6 py-20 text-white">
         <header className="flex flex-col items-center gap-6 text-center ">
           <h2>Contact Us</h2>
           <p>

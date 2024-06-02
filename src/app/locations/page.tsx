@@ -9,6 +9,7 @@ export default function LocationsPage() {
     <main className="flex flex-col gap-10 py-8 md:gap-32 xl:gap-8 ">
       {locations.map((location, i) => (
         <section
+          id={location.value}
           key={location.value}
           className={cn(
             `mx-auto flex w-full max-w-[689px] flex-col md:gap-6 xl:max-h-[326px] xl:max-w-[1111px] xl:flex-row`,
