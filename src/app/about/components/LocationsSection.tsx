@@ -1,26 +1,6 @@
 import React from "react";
 import Location from "./Location";
-
-const locations = [
-  {
-    label: "Canada",
-    value: "canada",
-    imageUrl: "/assets/shared/desktop/illustration-canada.svg",
-    className: "rotate-90",
-  },
-  {
-    label: "Australia",
-    value: "australia",
-    imageUrl: "/assets/shared/desktop/illustration-australia.svg",
-    className: "",
-  },
-  {
-    label: "United Kingdom",
-    value: "united-kingdom",
-    imageUrl: "/assets/shared/desktop/illustration-united-kingdom.svg",
-    className: "-rotate-90",
-  },
-];
+import { locations } from "@/lib/content";
 
 export type LocationType = (typeof locations)[0];
 

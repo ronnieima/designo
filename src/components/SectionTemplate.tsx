@@ -93,7 +93,7 @@ function Description({
   children: ReactNode;
   className?: string;
 }) {
-  return <p className={cn(className)}>{children}</p>;
+  return <div className={cn(className)}>{children}</div>;
 }
 
 function BackgroundPattern({ className }: { className?: string }) {

@@ -172,3 +172,42 @@ export const socials = [
     imageUrl: "/assets/shared/desktop/icon-instagram.svg",
   },
 ];
+
+export const locations = [
+  {
+    label: "Canada",
+    value: "canada",
+    imageUrl: "/assets/shared/desktop/illustration-canada.svg",
+    className: "rotate-90",
+    coords: [43.710986, -79.247612],
+    office: "Designo Central Office",
+    addressLineOne: "3886 Wellington Street",
+    addressLineTwo: "Toronto, Ontario M9C 3J5",
+    phone: "+1 253-863-8967",
+    email: "contact@designo.co",
+  },
+  {
+    label: "Australia",
+    value: "australia",
+    imageUrl: "/assets/shared/desktop/illustration-australia.svg",
+    className: "",
+    coords: [-33.10449, 151.6186],
+    office: "Designo AU Office",
+    addressLineOne: "19 Balonne Street",
+    addressLineTwo: "New South Wales 2443",
+    phone: "(02) 6720 9092",
+    email: "contact@designo.au",
+  },
+  {
+    label: "United Kingdom",
+    value: "united-kingdom",
+    imageUrl: "/assets/shared/desktop/illustration-united-kingdom.svg",
+    className: "-rotate-90",
+    coords: [53.735825, -1.329871],
+    office: "Designo UK Office",
+    addressLineOne: "13  Colorado Way",
+    addressLineTwo: "Rhyd-y-fro SA8 9GA",
+    phone: "078 3115 1400",
+    email: "contact@designo.uk",
+  },
+];
