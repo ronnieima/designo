@@ -20,10 +20,17 @@ import { cn } from "@/lib/utils";
 import { toast } from "react-toastify";
 
 const formSchema = z.object({
-  name: z.string().min(1, "Required"),
-  email: z.string().email().min(1, "Required"),
-  phone: z.string().min(1, "Required"),
-  message: z.string().min(1, "Required"),
+  name: z.string({ required_error: "Can't be empty" }).min(1, "Can't be empty"),
+  email: z
+    .string({ required_error: "Can't be empty" })
+    .email()
+    .min(1, "Can't be empty"),
+  phone: z
+    .string({ required_error: "Can't be empty" })
+    .min(1, "Can't be empty"),
+  message: z
+    .string({ required_error: "Can't be empty" })
+    .min(1, "Can't be empty"),
 });
 
 export default function ContactPage() {
@@ -62,10 +69,11 @@ export default function ContactPage() {
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="relative">
                   <FormControl>
                     <Input {...field} type="text" placeholder="Name" />
                   </FormControl>
+                  <FormMessage className="absolute right-8 top-0" />
                 </FormItem>
               )}
             />
@@ -74,10 +82,11 @@ export default function ContactPage() {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="relative">
                   <FormControl>
                     <Input {...field} type="email" placeholder="Email" />
                   </FormControl>
+                  <FormMessage className="absolute right-8 top-0" />
                 </FormItem>
               )}
             />
@@ -86,10 +95,11 @@ export default function ContactPage() {
               control={form.control}
               name="phone"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="relative">
                   <FormControl>
                     <Input {...field} type="tel" placeholder="Phone" />
                   </FormControl>
+                  <FormMessage className="absolute right-8 top-0" />
                 </FormItem>
               )}
             />
@@ -98,7 +108,7 @@ export default function ContactPage() {
               control={form.control}
               name="message"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="relative">
                   <FormControl>
                     <Input
                       {...field}
@@ -107,6 +117,7 @@ export default function ContactPage() {
                       className="pb-32 pt-4"
                     />
                   </FormControl>
+                  <FormMessage className="absolute right-8 top-0" />
                 </FormItem>
               )}
             />
