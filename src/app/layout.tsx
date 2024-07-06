@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import Script from "next/script";
+import Providers from "@/components/Providers";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -33,9 +34,11 @@ export default function RootLayout({
         ></Script>
       </head>
       <body className={cn("relative", jost.className)}>
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

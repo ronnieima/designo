@@ -1,13 +1,20 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import MaxWidthContainer from "./MaxWidthContainer";
 import CallToAction from "./ui/CallToAction";
 import NavLinks from "./ui/NavLinks";
 import SocialLinks from "./ui/SocialLinks";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathName = usePathname();
   return (
-    <footer className="relative mt-60 bg-black pb-16 pt-[253px] text-center">
+    <footer
+      className={cn("relative  bg-black pb-16  text-center", {
+        "mt-60 pt-[253px]": pathName !== "/contact",
+      })}
+    >
       <MaxWidthContainer
         className={cn(
           "gap-8",
