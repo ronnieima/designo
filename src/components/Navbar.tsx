@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       <nav className=" flex h-[96px] items-center md:h-[128px]">
         <MaxWidthContainer className="w-full flex-row justify-between px-4 sm:px-0">
-          <Link href={"/"}>
+          {/* <Link href={"/"}>
             <Image
               src={"/assets/shared/desktop/logo-dark.png"}
               width={0}
@@ -23,7 +23,8 @@ export default function Navbar() {
               sizes="100vw"
               alt="Designo Logo"
             />
-          </Link>
+          </Link> */}
+          <h2>BACKUPGENX</h2>
           <NavLinks className="hidden sm:flex sm:flex-row sm:text-black" />
 
           <Button

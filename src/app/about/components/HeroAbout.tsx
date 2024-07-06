@@ -15,7 +15,8 @@ export default function HeroAbout() {
     width: 0,
     height: 0,
     quality: 80,
-    src: "/assets/about/desktop/image-about-hero.jpg",
+    // src: "/assets/about/desktop/image-about-hero.jpg",
+    src: "/aboutus.jpeg",
   });
   const {
     props: { srcSet: tabletHero },
@@ -66,11 +67,16 @@ export default function HeroAbout() {
         <div className="z-10 space-y-6 md:space-y-8">
           <h1>About Us</h1>
           <p>
-            Founded in 2010, we are a creative agency that produces lasting
+            {/* Founded in 2010, we are a creative agency that produces lasting
             results for our clients. We’ve partnered with many startups,
             corporations, and nonprofits alike to craft designs that make real
             impact. We’re always looking forward to creating brands, products,
-            and digital experiences that connect with our clients’ audiences.
+            and digital experiences that connect with our clients’ audiences. */}
+            Welcome to BackupGenX, the brainchild of two innovative and
+            passionate young men, Jonathan and Scot. With a shared vision of
+            revolutionizing men's health and wellness, they embarked on a
+            mission to make high-quality, effective solutions for common health
+            concerns more accessible and approachable.
           </p>
         </div>
       </SectionTemplate.Content>
