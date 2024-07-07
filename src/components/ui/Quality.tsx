@@ -20,10 +20,10 @@ export default function Quality({
       className={cn(
         " flex flex-col items-center justify-center gap-12 text-center",
         "sm:flex-row",
-        "xl:flex-col"
+        "xl:flex-col",
       )}
     >
-      <div className="relative size-[202px] h-full w-full">
+      <div className="relative size-[202px] ">
         <Image
           src={imageUrl}
           width={0}
@@ -34,7 +34,7 @@ export default function Quality({
         />
         <div
           className={cn(
-            "bg-circle absolute top-0 -z-10 h-full w-full bg-cover",
+            "absolute top-0 -z-10 h-full w-full bg-circle bg-cover",
             className,
           )}
         ></div>

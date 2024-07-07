@@ -4,6 +4,7 @@ import { Button } from "./button";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CallToAction() {
   const pathName = usePathname();
@@ -16,17 +17,17 @@ export default function CallToAction() {
         "absolute -top-1/4 left-1/2 h-[379px] w-full  max-w-[327px] -translate-x-1/2  rounded-lg bg-peach text-white",
 
         "md:max-w-[690px]",
-        "lg:max-w-[1111px] ",
+        "lg:h-[292px] lg:max-w-[1111px]",
       )}
     >
       <div
         className={cn(
-          "flex h-full flex-col items-center justify-center gap-8 md:p-14",
-          " lg:flex-row lg:justify-between",
+          " relative flex h-full flex-col items-center justify-center gap-8 overflow-clip md:p-14",
+          " lg:pb-[ lg:flex-row lg:justify-between lg:px-24 lg:py-[72px]",
         )}
       >
         <header className="flex w-full flex-col items-center justify-center gap-4 px-6  lg:max-w-lg lg:items-start lg:text-left ">
-          <h1 className="md:max-w-sm ">Let’s talk about your project</h1>
+          <h2 className="md:max-w-sm ">Let’s talk about your project</h2>
           <p>
             Ready to take it to the next level? Contact us today and find out
             how our expertise can help your business grow.
@@ -35,7 +36,14 @@ export default function CallToAction() {
         <Button asChild className="h-[56px] w-[152px] uppercase">
           <Link href={"/contact"}>Get in touch</Link>
         </Button>
-        <div className="absolute left-0 top-0 -z-10 h-full w-full bg-threeCircles  bg-contain"></div>
+        <Image
+          className="absolute right-0 -z-10 h-[584px] w-[876px]"
+          src="assets/shared/desktop/bg-pattern-call-to-action.svg"
+          width={0}
+          height={0}
+          sizes="100vw"
+          alt="call to action pattern"
+        />
       </div>
     </div>
   );

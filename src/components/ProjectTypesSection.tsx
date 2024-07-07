@@ -11,7 +11,7 @@ export default function ProjectTypesSection() {
     ? projectTypes.filter((projectType) => projectType.href !== pathname)
     : projectTypes;
   return (
-    <section className="py-20">
+    <section>
       <MaxWidthContainer
         className={cn("gap-6 xl:grid xl:grid-cols-2 xl:grid-rows-2", {
           "xl:flex xl:flex-row": pathname !== "/",

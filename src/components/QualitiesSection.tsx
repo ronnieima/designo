@@ -5,7 +5,7 @@ import Quality from "./ui/Quality";
 
 export default function QualitiesSection() {
   return (
-    <section className="pt-20">
+    <section>
       <MaxWidthContainer className="gap-20 text-darkGray xl:flex-row">
         {qualities.map((quality) => (
           <Quality
