@@ -46,87 +46,103 @@ export default function ContactPage() {
     <main className="flex flex-col items-center gap-32 pb-32">
       <section
         className={cn(
-          "flex max-w-[698px] flex-col gap-12 bg-peach px-6 py-20 text-white md:rounded-radius",
+          "relative z-20  h-full max-w-[698px] gap-12 overflow-clip bg-peach px-6 py-20 text-white md:rounded-radius",
           "md:px-[58px] md:py-[71px] md:shadow-2xl",
-          "lg:max-h-[480px] lg:max-w-[1111px] lg:flex-row lg:py-[51px]",
+          "lg:h-[480px] lg:max-w-[1111px]  lg:px-[96px] lg:py-[51px]",
         )}
       >
-        <header className="flex flex-col items-center gap-6 text-center md:items-start md:text-left lg:max-w-[50%] lg:self-center">
-          <h2>Contact Us</h2>
-          <p>
-            Ready to take it to the next level? Let’s talk about your project or
-            idea and find out how we can help your business grow. If you are
-            looking for unique digital experiences that’s relatable to your
-            users, drop us a line.
-          </p>
-        </header>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(handleSubmit)}
-            className="flex w-full flex-col gap-4 lg:max-w-[50%]"
-          >
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem className="relative">
-                  <FormControl>
-                    <Input {...field} type="text" placeholder="Name" />
-                  </FormControl>
-                  <FormMessage className="absolute right-8 top-0" />
-                </FormItem>
-              )}
-            />
+        <div className={cn("flex flex-col", "lg:flex-row lg:gap-16")}>
+          <header className="flex flex-col items-center gap-6 text-center md:items-start md:text-left lg:max-w-[60%] lg:self-center lg:pr-16">
+            <h2>Contact Us</h2>
+            <p className="text-lightGray">
+              Ready to take it to the next level? Let’s talk about your project
+              or idea and find out how we can help your business grow. If you
+              are looking for unique digital experiences that’s relatable to
+              your users, drop us a line.
+            </p>
+          </header>
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(handleSubmit)}
+              className="flex w-full flex-col gap-4 lg:max-w-[40%]"
+            >
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="relative">
+                    <FormControl>
+                      <Input {...field} type="text" placeholder="Name" />
+                    </FormControl>
+                    <FormMessage className="absolute right-8 top-0" />
+                  </FormItem>
+                )}
+              />
 
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="relative">
-                  <FormControl>
-                    <Input {...field} type="email" placeholder="Email" />
-                  </FormControl>
-                  <FormMessage className="absolute right-8 top-0" />
-                </FormItem>
-              )}
-            />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="relative">
+                    <FormControl>
+                      <Input {...field} type="email" placeholder="Email" />
+                    </FormControl>
+                    <FormMessage className="absolute right-8 top-0" />
+                  </FormItem>
+                )}
+              />
 
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem className="relative">
-                  <FormControl>
-                    <Input {...field} type="tel" placeholder="Phone" />
-                  </FormControl>
-                  <FormMessage className="absolute right-8 top-0" />
-                </FormItem>
-              )}
-            />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem className="relative">
+                    <FormControl>
+                      <Input {...field} type="tel" placeholder="Phone" />
+                    </FormControl>
+                    <FormMessage className="absolute right-8 top-0" />
+                  </FormItem>
+                )}
+              />
 
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem className="relative">
-                  <FormControl>
-                    <Input
-                      {...field}
-                      type="text"
-                      placeholder="Your Message"
-                      className="pb-32 pt-4"
-                    />
-                  </FormControl>
-                  <FormMessage className="absolute right-8 top-0" />
-                </FormItem>
-              )}
-            />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem className="relative">
+                    <FormControl>
+                      <Input
+                        {...field}
+                        type="text"
+                        placeholder="Your Message"
+                        className="pb-32 pt-4"
+                      />
+                    </FormControl>
+                    <FormMessage className="absolute right-8 top-0" />
+                  </FormItem>
+                )}
+              />
 
-            <Button type="submit" className="self-center px-8 py-4 md:self-end">
-              SUBMIT
-            </Button>
-          </form>
-        </Form>
+              <Button
+                type="submit"
+                className="self-center px-8 py-4 md:self-end"
+              >
+                SUBMIT
+              </Button>
+            </form>
+          </Form>
+        </div>
+        <img
+          className={cn(
+            "absolute -z-20 hidden size-[640px] md:-left-24 md:-top-24 md:block",
+            "lg:bottom-0 lg:left-0 ",
+          )}
+          src="/assets/contact/desktop/bg-pattern-hero-desktop.svg"
+        />
+        <img
+          className={cn("absolute top-0 flex min-w-[1000px] md:hidden")}
+          src="/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg"
+        />
       </section>
       <LocationsSection />
     </main>

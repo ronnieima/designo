@@ -14,18 +14,18 @@ export default function HeroSection() {
         </p>
         <Button>LEARN MORE</Button>
       </MaxWidthContainer>
-      <Image
+      <img
         src={"/assets/home/desktop/image-hero-phone.png"}
         width={0}
         height={0}
-        className="absolute  -bottom-96 -z-10 h-auto w-full scale-[1.75] sm:-bottom-96 sm:scale-100 xl:-bottom-[600px] xl:-right-1/4 xl:scale-[0.6]"
+        className="absolute -bottom-40 -z-10 h-auto w-full scale-[1.75] sm:scale-100  md:-bottom-96 xl:-bottom-[600px] xl:-right-1/4 xl:scale-[0.6]"
         sizes="100vw"
         alt="smartphone"
       />
       <Image
         width={0}
         height={0}
-        className="absolute -right-[5.5rem] top-[17.5rem] -z-20 size-72 scale-[2.22]"
+        className="absolute -right-[5.5rem] top-[17.5rem] -z-20 size-72 scale-[2.22] xl:right-0"
         src={"/assets/home/desktop/bg-pattern-hero-home.svg"}
         alt="circle hero pattern"
       />
