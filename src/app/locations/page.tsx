@@ -3,7 +3,18 @@ import { locations } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer } from "react-leaflet";
+import dynamic from "next/dynamic";
+
+// Dynamically import MapContainer and TileLayer with ssr: false
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((module) => module.MapContainer),
+  { ssr: false },
+);
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((module) => module.TileLayer),
+  { ssr: false },
+);
+
 export default function LocationsPage() {
   return (
     <main className="flex flex-col gap-10 py-8 md:gap-32 xl:gap-8 ">

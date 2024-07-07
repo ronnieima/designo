@@ -10,7 +10,6 @@ export default function ProjectTypesSection() {
   const projectTypeLinks = pathname
     ? projectTypes.filter((projectType) => projectType.href !== pathname)
     : projectTypes;
-  console.log(pathname);
   return (
     <section className="py-20">
       <MaxWidthContainer
