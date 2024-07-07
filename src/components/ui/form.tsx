@@ -162,12 +162,13 @@ const FormMessage = React.forwardRef<
       ref={ref}
       id={formMessageId}
       className={cn(
-        "text-red-500 dark:text-red-900 text-sm font-light italic",
+        "text-red-500 dark:text-red-900 flex items-center gap-4 text-xs font-light italic",
         className,
       )}
       {...props}
     >
-      {`${body} !`}
+      {body}
+      <img src="/assets/contact/desktop/icon-error.svg" />
     </p>
   );
 });
