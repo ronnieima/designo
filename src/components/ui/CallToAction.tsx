@@ -1,12 +1,20 @@
+"use client";
 import React from "react";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function CallToAction() {
+  const pathName = usePathname();
+
+  if (pathName === "/contact") return;
+
   return (
     <div
       className={cn(
         "absolute -top-1/4 left-1/2 h-[379px] w-full  max-w-[327px] -translate-x-1/2  rounded-lg bg-peach text-white",
+
         "md:max-w-[690px]",
         "lg:max-w-[1111px] ",
       )}
@@ -24,7 +32,9 @@ export default function CallToAction() {
             how our expertise can help your business grow.
           </p>
         </header>
-        <Button className="h-[56px] w-[152px] uppercase">Get in touch</Button>
+        <Button asChild className="h-[56px] w-[152px] uppercase">
+          <Link href={"/contact"}>Get in touch</Link>
+        </Button>
         <div className="absolute left-0 top-0 -z-10 h-full w-full bg-threeCircles  bg-contain"></div>
       </div>
     </div>
