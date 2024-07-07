@@ -23,7 +23,7 @@ export default function Quality({
         "xl:flex-col",
       )}
     >
-      <div className="relative size-[202px] ">
+      <div className="relative min-h-[202px] min-w-[202px] ">
         <Image
           src={imageUrl}
           width={0}

@@ -27,7 +27,7 @@ export default function ProjectTypeLink({
       >
         <h2 className="uppercase">{label}</h2>
         <div className="flex items-center justify-between gap-4">
-          <h3>VIEW PROJECTS</h3>
+          <h3 className="text-[15px]">VIEW PROJECTS</h3>
           <Image
             src={"/assets/shared/desktop/icon-right-arrow.svg"}
             width={0}

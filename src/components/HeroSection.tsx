@@ -1,5 +1,6 @@
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -23,9 +24,13 @@ export default function HeroSection() {
         alt="smartphone"
       />
       <Image
-        width={0}
-        height={0}
-        className="absolute -right-[5.5rem] top-[17.5rem] -z-20 size-72 scale-[2.22] xl:right-0"
+        width={640}
+        height={640}
+        className={cn(
+          "absolute left-0 top-28 -z-20 min-h-[640px] min-w-[640px]",
+          "sm:-right-28 sm:left-auto",
+          "xl:right-0 xl:top-0",
+        )}
         src={"/assets/home/desktop/bg-pattern-hero-home.svg"}
         alt="circle hero pattern"
       />
